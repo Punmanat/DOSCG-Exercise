@@ -8,7 +8,7 @@ resources:
  disk_size_gb: 10
 
 env_variables:
-    REDISHOST: '10.151.110.155'
+    REDISHOST: '10.10.58.219'
     REDISPORT: '6379'
 network:
     name: default
