@@ -26,7 +26,7 @@ export default new Vuex.Store({
       if (localValue) {
         commit("PUSH_BC", JSON.parse(localValue));
       } else {
-        const { data } = await axios.get("http://localhost:3000/bc");
+        const { data } = await axios.get("https://doscg-267108.appspot.com/bc");
         localStorage.setItem("bc", JSON.stringify(data));
         commit("PUSH_BC", data);
       }
@@ -37,7 +37,7 @@ export default new Vuex.Store({
       if (localValue) {
         commit("PUSH_XYZ", JSON.parse(localValue));
       } else {
-        const { data } = await axios.get("http://localhost:3000/xyz");
+        const { data } = await axios.get("https://doscg-267108.appspot.com/xyz");
         localStorage.setItem("xyz", JSON.stringify(data));
         commit("PUSH_XYZ", data);
       }
@@ -48,7 +48,7 @@ export default new Vuex.Store({
       if (localValue) {
         commit("PUSH_DISTANCE", JSON.parse(localValue));
       } else {
-        const { data } = await axios.get("http://localhost:3000/route");
+        const { data } = await axios.get("https://doscg-267108.appspot.com/route");
         localStorage.setItem("distance", JSON.stringify(data));
         commit("PUSH_DISTANCE", data);
       }

@@ -8,7 +8,9 @@
         >1.X, Y, 5, 9, 15, 23, Z - Please create a new function for finding X, Y, Z value</h4>
         <img src="../assets/solution1.png" class="img-fluid" width="400" height="300" />
         <mdb-btn color="warning" size="lg" block @click="clickFindXYZ()">
-          <a href="#card"><span style="color:white;font-size:20px;">{{clickData}}</span></a>
+          <a href="#card">
+            <span style="color:white;font-size:20px;">{{clickData}}</span>
+          </a>
         </mdb-btn>
         <mdb-card v-show="isShow" style="width:100%" id="card">
           <mdb-card-body>
@@ -64,14 +66,12 @@ export default {
       if (this.isShow) {
         this.clickData = "Hide me";
         const status = await this.$store.dispatch("findXYZ");
-        setTimeout(() => {
-          if (status == true) {
-            this.data = this.$store.state.XYZ;
-            this.isLoading = false;
-          } else {
-            this.isLoading = true;
-          }
-        }, 1000);
+        if (status == true) {
+          this.data = this.$store.state.XYZ;
+          this.isLoading = false;
+        } else {
+          this.isLoading = true;
+        }
       } else {
         this.clickData = "Click here to find answer!!";
       }

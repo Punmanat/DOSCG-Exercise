@@ -3,8 +3,10 @@
     <Navbar></Navbar>
     <b-container>
       <div class="content">
-        <h4 style="margin:20px 0">2.If A = 21, A + B = 23, A + C = -21 - Please create a new function for finding B and C value.</h4>
-        <img src="../assets/solution2.png" class="img-fluid" width="400" height="300"/>
+        <h4
+          style="margin:20px 0"
+        >2.If A = 21, A + B = 23, A + C = -21 - Please create a new function for finding B and C value.</h4>
+        <img src="../assets/solution2.png" class="img-fluid" width="400" height="300" />
         <mdb-btn color="warning" size="lg" block @click="clickFindBC()">
           <span style="color:white;font-size:20px;">{{clickData}}</span>
         </mdb-btn>
@@ -62,14 +64,12 @@ export default {
       if (this.isShow) {
         this.clickData = "Hide me";
         const status = await this.$store.dispatch("findBC");
-        setTimeout(() => {
-          if (status == true) {
-            this.data = this.$store.state.BC;
-            this.isLoading = false;
-          } else {
-            this.isLoading = true;
-          }
-        }, 1000);
+        if (status == true) {
+          this.data = this.$store.state.BC;
+          this.isLoading = false;
+        } else {
+          this.isLoading = true;
+        }
       } else {
         this.clickData = "Click here to find answer!!";
       }

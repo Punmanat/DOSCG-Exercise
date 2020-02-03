@@ -38,7 +38,6 @@ router.get("/route", async (req, res) => {
   };
   const data = await Model.getValue("distance");
   if (data) {
-    console.log(data);
     return res.json(data);
   }
   googleMapsClient.directions(query, (err, response) => {
@@ -59,7 +58,6 @@ router.post("/line", (req, res) => {
     reply(reply_token);
     const dateAfter = new Date();
     durationInSecond = (dateAfter - dateBefore) / 1000;
-    console.log(durationInSecond);
     if (durationInSecond > 10) {
       send_notify("bot reply > 10 seconds");
     } else {

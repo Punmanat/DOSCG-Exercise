@@ -12,7 +12,7 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.config.productionTip = false
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'api key',
+    key: 'AIzaSyC34fO6AG5mI9OjqAEwHCZqDqD9nromg2w',
   },
 })
 
