@@ -24,13 +24,13 @@
           <h5 class="title">Services</h5>
           <ul>
             <li class="list-unstyled">
-              <a href="#!">findXYZ</a>
+              <a href="/findXYZ">findXYZ</a>
             </li>
             <li class="list-unstyled">
-              <a href="#!">findBC</a>
+              <a href="/findBC">findBC</a>
             </li>
             <li class="list-unstyled">
-              <a href="#!">findDistance</a>
+              <a href="/findDistance">findDistance</a>
             </li>
           </ul>
         </mdb-col>
