@@ -3,11 +3,11 @@ env: flex
 manual_scaling:
   instances: 1
 resources:
- cpu: 1
- memory_gb: 1
- disk_size_gb: 10
+  cpu: 1
+  memory_gb: 1
+  disk_size_gb: 10
 env_variables:
-    REDISHOST: '10.10.58.219'
-    REDISPORT: '6379'
-pc_access_connector:
-    'projects/doscg-267108/locations/us-east1/connectors/doscg-vpc'
+  REDISHOST: "10.10.58.219"
+  REDISPORT: "6379"
+network:
+  name: default
