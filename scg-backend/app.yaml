@@ -6,8 +6,10 @@ resources:
  cpu: 1
  memory_gb: 1
  disk_size_gb: 10
-
+pc_access_connector:
+    'projects/doscg-267108/locations/us-east1/connectors/default'
 env_variables:
+    REDISHOST: '10.10.58.219'
     REDISPORT: '6379'
 network:
     name: default
