@@ -1,4 +1,4 @@
-# DOSCG-Assignment
+# DOSCG-Assignments
 
 ## This is assignment for interview at SCG.
 
